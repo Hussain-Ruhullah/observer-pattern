@@ -19,9 +19,11 @@ var Fan = /** @class */ (function () {
     Fan.prototype.update = function (temperature) {
         if (temperature > 25) {
             console.log('Fan: Its hot here, turning myself on...');
+            return 'Fan: Its hot here, turning myself on...';
         }
         else {
             console.log('Fan: Its nice and cool, turning myself off...');
+            return 'Fan: Its nice and cool, turning myself off...';
         }
     };
     return Fan;
