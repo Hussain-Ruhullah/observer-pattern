@@ -6,4 +6,5 @@ var weatherStation = new subject_1.WeatherStation();
 var tempDisplay = new observer_1.TemperatureDisplay(weatherStation);
 var fan = new observer_1.Fan(weatherStation);
 weatherStation.setTemperature(20);
-weatherStation.setTemperature(30);
+//weatherStation.setTemperature(3);
+//weatherStation.setCO2(99); 

@@ -14,7 +14,7 @@ var WeatherStation = /** @class */ (function () {
     WeatherStation.prototype.notifyObservers = function () {
         for (var _i = 0, _a = this.observers; _i < _a.length; _i++) {
             var observer = _a[_i];
-            observer.update(this.temperature);
+            observer.update({ temperature: this.temperature, co2: this.co2 });
         }
     };
     WeatherStation.prototype.setTemperature = function (temp) {
@@ -22,7 +22,12 @@ var WeatherStation = /** @class */ (function () {
         this.temperature = temp;
         this.notifyObservers();
     };
+    WeatherStation.prototype.setCO2 = function (co2) {
+        console.log('WeatherStation: new CO2 measurement: ' + co2);
+        this.co2 = co2;
+        this.notifyObservers();
+    };
     return WeatherStation;
 }());
 exports.WeatherStation = WeatherStation;
-// ------------------------------------------------------ 
+// ------------------------------------------------------
